@@ -3,6 +3,11 @@
     "browser": true,
     "es6": true
   },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
@@ -13,7 +18,10 @@
     "sourceType": "module",
     "useStrict": true
   },
-  "extends": ["airbnb", "prettier"],
+  "extends": [
+    "prettier","plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": [
